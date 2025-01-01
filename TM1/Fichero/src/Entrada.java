@@ -1,3 +1,5 @@
+import controller.GestorFicheros;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -5,13 +7,32 @@ public class Entrada {
     public static void main(String[] args) {
         //File -> es un fichero logico apunta a un fichero fisico
 
+
+
+        //Instancias de objetos y llamadas a objetos es lo que deberiamos tener en el main
+
+        GestorFicheros gestorFicheros = new GestorFicheros();
+        gestorFicheros.lecturaDirectoios("src/resources/directorio");
+
+        gestorFicheros.lecturaRecursiva("/user/nicolas/documents/github");
+
+
+
+
+
+
+
+
+
+
+
        /*fichero logico (fichero no existe) apunta a algo que no esta pero que creamos ahora
         File ficheroSinPuntero = new File("/Users/nicolas/Documents/GitHub/ACCESODATOS/TM1/ejemplo.md");
         System.out.println(ficheroSinPuntero.getName());
         System.out.println(ficheroSinPuntero.getParent());
         System.out.println(ficheroSinPuntero.length());
         System.out.println(ficheroSinPuntero.exists());*/
-
+/*
         //ficherofisico (fichero si existe) apunta a algo que no esta pero que creamos ahora ruta absoluta
         File ficheroConPunteroFisicoLogico = new File("src/resources/directorio/ejemplo.md");
         System.out.println(ficheroConPunteroFisicoLogico.getName());
@@ -33,11 +54,11 @@ public class Entrada {
         // -> 3º Listar el nombre de todos los ficheros del SISTEMA( c:/ o /Users)
 
         // RECURSIVIDAD
-        
 
 
 
-        /* Para crear un fichero si no existe. Ademas nos sugiere controlar el error
+
+      Para crear un fichero si no existe. Ademas nos sugiere controlar el error
         if(!ficheroConPunteroFisicoLogico.exists()){
             try {
                 ficheroConPunteroFisicoLogico.createNewFile();
