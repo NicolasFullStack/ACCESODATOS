@@ -2,12 +2,11 @@ package controller;
 
 import org.w3c.dom.ls.LSOutput;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 
 public class GestorFicheros {
 
-    public void lecturaDirectoios(String path){
+  /*  public void lecturaDirectoios(String path){
         // Me creo un File logico que apunta a un File fisico que exista
         // -> 1º Obtener todos los nombres de los ficheros del directorio llamado directorio
 
@@ -16,7 +15,7 @@ public class GestorFicheros {
         String[] nombres = file.list();
         for ( String item :nombres ){
             System.out.println(item);
-        }*/
+        }
 
         // Para decirle que no muestre los archivos ocultos usamos el !item.isHidden()
         File file = new File(path);
@@ -38,7 +37,7 @@ public class GestorFicheros {
         }
     }
 
-public void lecturaRecursiva(String path){
+    public void lecturaRecursiva(String path){
 
         File file= new File(path); // paso a n fichero logico y fisico
        // File[] ficheros = file.listFiles();
@@ -55,18 +54,69 @@ public void lecturaRecursiva(String path){
 
             // RECURSIVIDAD -> EJECUCION QUE SE LLAMA A ELLA MISA, CON CUIDADO DE QUE TENGA UNA SALIDA.
 
-
-
         }
-
-
-
 }
+
     private void lecturaSubdirectorios(File fichero ) {
         for (File file : fichero.listFiles()) {
             System.out.println("\t" + file.getName());
             if (file.isDirectory()) {
                 lecturaSubdirectorios(file);
+            }
+        }
+
+    }*/
+
+    public void lecturaTextoPlano (String path){
+        //File -> FILEREADER -> BUFFEREDREADER -<
+
+        File file = new File(path); //Crea el fichero logigo y si es fisico podemos trabajar con el
+        //FileReader filereader = null ;//Creamos el objeto de tipo File i.o
+        BufferedReader bufferedReader= null;
+
+        //Preguntamos si existe y es un fichero
+        if(file.exists() && file.isFile()){
+            //Trato la excepcion aqui
+
+            try {
+               // filereader = new FileReader(file);// inicializamos la lectura de fichero
+                bufferedReader = new BufferedReader( new FileReader(file));
+                System.out.println(bufferedReader.readLine());
+
+                String lectura =null;
+                while (lectura = bufferedReader.readLine() !=null){
+                    System.out.println(lectura);
+                }
+
+                // mientras exista el numero haz la lectura e imprime LECTURA CON FILEREADER
+                // int lectura =0;
+                /*while ((lectura = filereader.read()) != -1 ){
+                    // imprime los numeros
+                    System.out.print((char) lectura);
+                }*/
+
+
+
+
+                /*int lectura = filereader.read();// int -> Unicode ASCI
+                System.out.println((char) lectura);*/
+
+            }catch (FileNotFoundException e){
+                System.out.println("Fallo de lectura");
+                System.out.println(e.getMessage());
+
+            } catch (IOException e) {
+                System.out.println("Error en la escritura, fallo de permisos");// Este es el tratamiento de la lectura
+            } finally {
+                //Se ejecuta siempre .Ha de ir siempre, Todos los flujos de datos se tienen que cerrar siempre
+                try {
+                    BufferedReader.close();//NULLPOINTEREXCEPTION
+                }catch (IOException e){
+                    System.out.println("Error en el cerrado del flujo");
+                    System.out.println(e.getMessage());
+                }catch (NullPointerException e){
+                    System.out.println("Error en el cerrado por ser nulo");
+                }
             }
         }
 

@@ -8,14 +8,15 @@ public class Entrada {
         //File -> es un fichero logico apunta a un fichero fisico
 
 
-
         //Instancias de objetos y llamadas a objetos es lo que deberiamos tener en el main
 
         GestorFicheros gestorFicheros = new GestorFicheros();
-        gestorFicheros.lecturaDirectoios("src/resources/directorio");
+       /* gestorFicheros.lecturaDirectoios("src/resources/directorio");
+        gestorFicheros.lecturaRecursiva("/user/nicolas/documents/github");*/
 
-        gestorFicheros.lecturaRecursiva("/user/nicolas/documents/github");
+        //File input y output
 
+        gestorFicheros.lecturaTextoPlano("src/resources/ficheros/lectura.txts");
 
 
 
@@ -32,41 +33,33 @@ public class Entrada {
         System.out.println(ficheroSinPuntero.getParent());
         System.out.println(ficheroSinPuntero.length());
         System.out.println(ficheroSinPuntero.exists());*/
-/*
+
         //ficherofisico (fichero si existe) apunta a algo que no esta pero que creamos ahora ruta absoluta
-        File ficheroConPunteroFisicoLogico = new File("src/resources/directorio/ejemplo.md");
-        System.out.println(ficheroConPunteroFisicoLogico.getName());
-        System.out.println(ficheroConPunteroFisicoLogico.getParent());
-        System.out.println(ficheroConPunteroFisicoLogico.length());
-        System.out.println(ficheroConPunteroFisicoLogico.exists());
-        System.out.println(ficheroConPunteroFisicoLogico.isDirectory());
+        //File ficheroConPunteroFisicoLogico = new File("src/resources/directorio/ejemplo.md");
+        //System.out.println(ficheroConPunteroFisicoLogico.getName());
+        //System.out.println(ficheroConPunteroFisicoLogico.getParent());
+        //System.out.println(ficheroConPunteroFisicoLogico.length());
+        //System.out.println(ficheroConPunteroFisicoLogico.exists());
+        //System.out.println(ficheroConPunteroFisicoLogico.isDirectory());
 
 
         //File[]-> devuelve todos los FICHEROS que estan dentro del directorio con un array
-        ficheroConPunteroFisicoLogico.listFiles();
+        //ficheroConPunteroFisicoLogico.listFiles();
 
         // String [] -> devuelve todas las rutas de los FICHEROS  que estan dentro del directorio
-        ficheroConPunteroFisicoLogico.list();
+        //ficheroConPunteroFisicoLogico.list();
 
         // -> 1º Obtener todos los nombres de los ficheros del directorio llamado directorio
         // -> 2º Crear una subcarpeta en el directorio  llamado directorio y crear en ella un fichero
         // ->  Obterner todos los nombres de los ficheros del directorio llamado directorio y el subdirectorio
         // -> 3º Listar el nombre de todos los ficheros del SISTEMA( c:/ o /Users)
-
-        // RECURSIVIDAD
-
-
-
-
-      Para crear un fichero si no existe. Ademas nos sugiere controlar el error
-        if(!ficheroConPunteroFisicoLogico.exists()){
+        /* if (!ficheroConPunteroFisicoLogico.exists()) {
             try {
                 ficheroConPunteroFisicoLogico.createNewFile();
             } catch (IOException e) {
                 System.out.println("fallo en la creacion del fichero");
-            }
-        }*/
-
+            }*/
+        }
 
     }
 }
