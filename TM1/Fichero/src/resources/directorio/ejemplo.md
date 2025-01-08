@@ -1,1 +1,0 @@
-Esto es una creacion de fichero copiando el path desde el propio fichero y ahora tiene contenido
