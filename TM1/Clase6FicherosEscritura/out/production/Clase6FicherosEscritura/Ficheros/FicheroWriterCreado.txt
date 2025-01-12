@@ -1,0 +1,3 @@
+Hola )si no ponemos True en append no anexa los datos )y los pone en la misma linea
+ y los pone en la misma linea si no ponemos el salto de lineaX
+88X
