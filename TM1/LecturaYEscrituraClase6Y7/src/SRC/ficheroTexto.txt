@@ -1,0 +1,3 @@
+GestorFichero es el ejemplo para lectura de fichero caracter a caracter
+GestorFicheroBufferYPrintReader es la lectura de fichero linea a linea
+Este proyecto es para verlo con la clase 6

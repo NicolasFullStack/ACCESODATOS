@@ -3,6 +3,7 @@ import java.io.IOException;
 
 public class Entrada {
     public static void main(String[] args) {
+
         // codigo de la 3Clase 1 Trimestre
         // FILE ->  Fichero logico -> fisico
 
