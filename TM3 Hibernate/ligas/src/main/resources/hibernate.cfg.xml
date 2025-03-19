@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/hibernate-configuration">
+
+    <session-factory>
+
+        <property name="current_session_context_class">thread</property>
+        <property name="connection.url">jdbc:mysql://localhost/ligas_unir</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password"></property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <mapping class="model.Liga"/>
+        <mapping class="model.jugador"/>
+        <mapping class="model.Entrenador"/>
+        <mapping class="model.Equipo"/>
+        <mapping class="model.Posicion"/>
+        <mapping class="model.Competicion"/>
+
+
+    </session-factory>
+</hibernate-configuration>

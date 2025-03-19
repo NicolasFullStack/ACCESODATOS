@@ -1,0 +1,8 @@
+- Agregar alumnos
+- Agregar profesores
+- Obtener todos los alumnos de la base de datos
+- Obtener todos los alumnos de un curso indicado por parámetros
+- Obtener todos los profesores de un curso indicada por parámetros
+- Obtener el curso que se imparte en un aula indicada por parámetros
+- Obtener el nombre de todos los cursos que imparte un profesor
+- Obtener todas las aulas que tienen una capacidad superior a 30 alumnos
