@@ -8,11 +8,9 @@ import java.io.*;
 
 public class Entrada {
     public static void main(String[] args) {
-File file = new File("src/main/resources/usuario.txt");
+        //Clase 7 Primer Trimestre
+/*File file = new File("src/main/resources/usuario.txt");
         BufferedReader bufferedReader = null;
-
-
-
 
         try {
             bufferedReader = new BufferedReader(new FileReader(file));
@@ -54,6 +52,11 @@ File file = new File("src/main/resources/usuario.txt");
             }
         }
 
-    }
+    }*/
+//Clase 8 Primer Trimestre
+        PeticionJASON peticionJASON = new PeticionJASON();
+        peticionJASON.procesarPeticion();
 
+
+    }
 }
